@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Collaborative Document Editing Application
 
-First, run the development server:
+This project is a collaborative document editing application built with Next.js, React, Liveblocks, TipTap editor, and other modern web technologies. It allows multiple users to edit documents in real-time with rich text formatting, image support, and more.
+
+## Table of Contents
+
+- [Collaborative Document Editing Application](#collaborative-document-editing-application)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
+    - [Development Server](#development-server)
+    - [Production Build](#production-build)
+  - [Linting](#linting)
+  - [Technologies Used](#technologies-used)
+  - [Environment Variables](#environment-variables)
+
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (version 14.x or higher recommended)
+- **npm** or **yarn** package manager
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. **Unzip the file **
+
+2. **Navigate to the project directory**
+
+3. **Install dependencies**
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+4. **Set up environment variables**
+
+   Create a `.env.local` file in the root of the project and add the necessary environment variables. See [Environment Variables](#environment-variables) for more details.
+
+## Running the Project
+
+### Development Server
+
+Start the development server with:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or with yarn:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open your browser and navigate to `http://localhost:3000` to view the application.
 
-## Learn More
+### Production Build
 
-To learn more about Next.js, take a look at the following resources:
+To build the application for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start the production server:
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Linting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To check for linting errors:
+
+```bash
+npm run lint
+```
+
+## Technologies Used
+
+- **Next.js**: React framework for server-side rendering and generating static websites.
+- **React**: JavaScript library for building user interfaces.
+- **Liveblocks**: Real-time collaboration infrastructure.
+- **TipTap**: Headless rich-text editor framework for React.
+- **Tailwind CSS**: Utility-first CSS framework.
+- **Clerk**: Authentication solution for React applications.
+- **Radix UI**: Unstyled, accessible UI components.
+- **Zustand**: State management library.
+- **TypeScript**: Typed superset of JavaScript.
+- **ESLint**: Pluggable linting utility for JavaScript and TypeScript.
+
+## Environment Variables
+
+The application requires certain environment variables to function correctly. Create a `.env.local` file in the root directory and add the following variables:
+
+```bash
+# Liveblocks API key
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=your-liveblocks-public-key
+
+# Clerk API keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+CLERK_SECRET_KEY=your-clerk-secret-key
+
+# Convex deployment URL
+NEXT_PUBLIC_CONVEX_URL=your-convex-deployment-url
+```
+
+Replace the placeholder values with your actual API keys and URLs. You may need to sign up for these services to obtain the necessary credentials.
+
+
+
+
+
+
