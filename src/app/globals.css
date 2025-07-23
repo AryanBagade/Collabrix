@@ -281,3 +281,7 @@ body {
     display: none;
   }
 }
+
+div[data-radix-popover-content-wrapper] {
+  z-index: 1000000000000000000000000000 !important;
+}
